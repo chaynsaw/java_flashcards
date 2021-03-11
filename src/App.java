@@ -1,15 +1,13 @@
 import java.io.*;
 import java.util.Scanner;
-public class App
-{
-    public static void main(String[] args) throws Exception
-    {
-//parsing a CSV file into Scanner class constructor  
+
+public class App {
+    public static void main(String[] args) throws Exception {
         Scanner sc = new Scanner(new File("/Users/chaynorhsiao/Downloads/Sessions 1-2.csv"));
         sc.useDelimiter(",");   //sets the delimiter pattern
-        while (sc.hasNext())  //returns a boolean value
-        {
-            System.out.print(sc.next());  //find and returns the next complete token from this scanner
+        while (sc.hasNext())  {
+            System.out.println(" // ");
+            System.out.print(sc.next());
         }
         sc.close();  //closes the scanner
     }
