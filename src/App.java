@@ -7,5 +7,7 @@ public class App {
         GameChooser gameChooser = new GameChooser();
         gameChooser.addGame(new NumberGuesser());
         gameChooser.printAllGames();
+        NumberGuesser game = new NumberGuesser();
+        game.generateRandomInt();
     }
 }  
