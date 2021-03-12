@@ -2,13 +2,14 @@ import java.io.*;
 import java.util.Scanner;
 
 public class App {
-    public static void main(String[] args) throws Exception {
-        Scanner sc = new Scanner(new File("/Users/chaynorhsiao/Downloads/Sessions 1-2.csv"));
-        sc.useDelimiter(",");   //sets the delimiter pattern
-        while (sc.hasNext())  {
-            System.out.println(" // ");
-            System.out.print(sc.next());
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int num = (int)(Math.random() * 20);
+        System.out.println("I'm thinking of a number between 0-100. Hint, it's " + num);
+        while (sc.hasNext()) {
+            if (sc.nextInt() == num) {
+                break;
+            }
         }
-        sc.close();  //closes the scanner
     }
 }  
