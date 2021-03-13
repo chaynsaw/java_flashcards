@@ -6,9 +6,19 @@ public class App {
         Scanner sc = new Scanner(System.in);
         int rand = (int) (Math.random() * 20);
         System.out.println(rand);
-        while (!sc.hasNextInt()) {
+        System.out.println("Please enter a number between 0 - 20. ");
+        while (sc.hasNext()) {
+            if (sc.hasNextInt()) {
+                if (sc.nextInt() == rand) {
+                    System.out.println("You guessed correctly! Goodbye.");
+                    break;
+                } else {
+                    System.out.println("Incorrect. Guess again.");
+                    continue;
+                }
+            }
+            System.out.println("Not an integer. Enter a whole number, please.");
             sc.next();
-            System.out.println("Enter a whole number");
         }
     }
 }  
